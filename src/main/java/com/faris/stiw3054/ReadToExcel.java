@@ -14,7 +14,7 @@ class ReadToExcel {
         try{
             FollowingStat list = new FollowingStat();
             HSSFWorkbook workbook = new HSSFWorkbook();
-            HSSFSheet sheet = workbook.createSheet("Student");
+            HSSFSheet sheet = workbook.createSheet("Sir Zhamri Follower Statistic");
 
             Row rowHeader = sheet.createRow(0);
             rowHeader.createCell(0).setCellValue("Login id");
@@ -53,7 +53,7 @@ class ReadToExcel {
             for (int i= 1;i<=100;i++)
                 sheet.autoSizeColumn(i);
 
-            FileOutputStream out= new FileOutputStream(new File("G:\\Student_List.xls"));
+            FileOutputStream out= new FileOutputStream(new File("G:\\Sir Zhamri Follower Statistic.xls"));
             workbook.write(out);
             out.close();
             workbook.close();
